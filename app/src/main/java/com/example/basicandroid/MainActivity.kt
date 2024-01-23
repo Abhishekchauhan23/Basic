@@ -3,11 +3,19 @@ package com.example.basicandroid
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
+   /*BASIC*/
+
 //Activity
 //Services
 //Intent-Filter
 //Broadcast
 
+    /*Advance*/
+
+//WorkManger
+//ViewModel
+//Flow
+//Coroutines
 
 
 
