@@ -2,9 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:allowBackup="true"
@@ -17,12 +17,7 @@
         android:theme="@style/Theme.BasicAndroid"
         tools:targetApi="31">
         <activity
-            android:name=".Services.ServiceActivity"
-            android:exported="true">
-
-        </activity>
-        <activity
-            android:name=".Services.AlarmAppActivity"
+            android:name=".Room.RoomActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,21 +26,27 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activity.LearnActivity"
+            android:name=".Services.ServiceActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".Services.AlarmAppActivity"
             android:exported="true">
 
         </activity>
         <activity
+            android:name=".Activity.LearnActivity"
+            android:exported="true"></activity>
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
 
-        <receiver android:name=".Services.AlarmReceiver"
+        <receiver
+            android:name=".Services.AlarmReceiver"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.example.alarmmanagerdemo.ALARM_TRIGGERED"/>
+                <action android:name="com.example.alarmmanagerdemo.ALARM_TRIGGERED" />
             </intent-filter>
         </receiver>
-
     </application>
 
 </manifest>
